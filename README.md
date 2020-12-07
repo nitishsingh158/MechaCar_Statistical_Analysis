@@ -16,7 +16,7 @@ The dataset of 50 car prototypes is used to identify ideal vehicle performance b
  - The low p-values of the intercept shows that there are other variables not present in the dataset that explain the statical variation in the MPG. This can be variables such as engine type, fuel type etc. 
 <br>
 <br>
-![Summary](MechaCar_Statistical_Analysis/Resources/mpg_summary.png)
+![Summary](Resources/mpg_summary.png)
 
 ## Summary Statistics on Suspension Coils
 The `Suspension_Coil.csv` dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots.
