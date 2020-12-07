@@ -48,23 +48,23 @@ Ha : There is a statistical difference between the observed sample mean and its 
 1. T-Test for all of the manufacturing lots together shows that the p-value of 0.06028 is higher than our significance level of 0.05 and therefore we fail to reject our null hypothesis.
 <br>
 <br>
-![Summary](Resources/total_ttest.png)<br>
+![Total](Resources/total.png)<br>
 
 
 2. T-Test for Lot1 PSI data shows that the p-value of 1 is higher than our significance level of 0.05 and therefore we fail to reject our null hypothesis. 
 <br>
 <br>
-![Summary](Resources/lot1_ttest.png)<br>
+![Lot1](Resources/lot1.png)<br>
 
 3. -Test for for Lot2 PSI data show that the p-value of 0.6072 is higher than our significance level of 0.05 and threfore we fail to reject our null hypothesis. 
 <br>
 <br>
-![Summary](Resources/lot2_ttest.png)<br>
+![Lot2](Resources/lot2.png)<br>
 
 4. -Test for all of the manufacturing lots together show that the p-value of 0.04168 is lower than our significance level of 0.05 and therefore we can reject our null hypothesis and conclude that Lot3 sample data is statistically different from the population mean. 
 <br>
 <br>
-![Summary](Resources/lot3_ttest.png)<br>
+![Lot3](Resources/lot3.png)<br>
 
 ## Study Design: MechaCar vs Competition
 The following analysis can be done to further quantify how the MechaCar(baseline Automotive) performs against the competition. 
