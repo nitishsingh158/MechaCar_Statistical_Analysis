@@ -11,13 +11,17 @@ The dataset of 50 car prototypes is used to identify ideal vehicle performance b
 ![Dataset](Resources/mpg_dataset.png)
 
 ### Summary 
- - Based on the p-values of each variable `vehicle_length` and `ground_clearance` have a statistically significant influence on the MPG performance of the vehicle. 
+ - Based on the p-values of each variable `vehicle_length` and `ground_clearance` have a statistically significant influence on the MPG performance of the vehicle. The variation of `mpg` with the statically significant variables is shown in the charts below. 
  - The overall low score of the p-values shows that we can reject the null hypothesis that states H0 = the slope of the linear model is zero, or m = 0 
  - The R-squared values of 0.7149 shows that the statically significant variables explain approximately 71% of the variation in the MPG. 
  - The low p-values of the intercept shows that there are other variables not present in the dataset that explain the statical variation in the MPG. This can be variables such as engine type, fuel type etc. 
 
 
 ![Summary](Resources/mpg_summary.png)
+
+![Summary](Resources/vehicle_length.png)
+
+![Summary](Resources/ground_clearance.png)
 
 ## Summary Statistics on Suspension Coils
 The `Suspension_Coil.csv` dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots.
@@ -75,11 +79,19 @@ Ha : There is a statistical difference between the observed sample mean and its 
 ![Lot3](Resources/lot3.png)
 
 ## Study Design: MechaCar vs Competition
-The following analysis can be done to further quantify how the MechaCar(baseline Automotive) performs against the competition. 
-The statistical study can be performed as follows:
-- Merge the competitor data with mechanical data and add a categorical field "manufacturer"
-- The mpg and cost in all datasets must be numerical, continuous and normally distributed. Also, the variance among each group should be very similar.
-- Add a new field called car-type example: compact, sedan, SUV, AWD etc.
-- Perform two ANOVA analysis for the cost, fuel efficiency (mpg) for the same type of cars
-- Evaluate the null hypothesis which states that all groups are equal.
-- if the Pr(>F) > 0.05 (Significance level) we can state the MechaCar is performing as well as its competitors
+The following analysis can be done to further quantify how the MechaCar(baseline automotive) performs against the competition. 
+The statistical study can be performed to test the following:
+- Fuel Efficiency, mpg (highway and city) / engine hp
+- Cost of the vehicle
+- horsepower / vehicle type
+
+#### Statistical Tests
+- Merge the competitor data with the MechaCar data and add a categorical field "manufacturer" to filter on using `group_by`. 
+- The mpg and cost and hp in all datasets must be numerical, continuous and normally distributed. Also, the variance among each group should be very similar.
+- Add a new field for vehicle type example: compact, sedan, SUV, AWD etc. This will be used for the horsepower/vehicle type analysis. 
+- Perform two ANOVA analysis for the fuel efficiency (mpg), cost and horsepower for the same type of cars with the following hypothesis:<br>
+H0 : The means of all groups are equal, or µ1 = µ2 = … = µn.<br>
+Ha : At least one of the means is different from all other groups.
+
+#### Inference
+- If the Pr(>F) > 0.05 (Significance level) we can state the MechaCar is performing as well as its competitors, but if the Pr(>F) < 0.05 we can conclude that the mean of the metrics for MechaCars is different from its competitors. In such a case we will need to perform a t-test to find out whether the statistical mean for MechaCars is lower or greater than the means of its competitors. 
